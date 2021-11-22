@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style_page.css') }}">
+    <title>User Page</title>
+</head>
+<body>
+    <div class="spacing">
+        <span class= "flex_space">
+            <h1>User {{user_profile.id}}</h1>
+            <a href="/depot/home">Home</a>
+        </span>
+        <div class="container">
+            <p>Full Name: {{user_profile.first_name}} {{user_profile.last_name}}</p>
+            <p>Email: {{user_profile.email}}</p>
+            <p>Created On: {{user_profile.created_at.strftime("%B %d, %Y  at %H:%M:%S")}}</p>
+            <p>Last Updated On: {{user_profile.updated_at.strftime("%B %d, %Y  at %H:%M:%S")}}</p>
+        </div>
+        <div>
+            <a href="/depot/user/{{user_profile.id}}/edit">Edit</a>
+            <a href="/depot/user/{{user_profile.id}}/delete">Delete</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body>div {
+    margin: 25px 50px;
+}
+.flex_space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+form input {
+    margin-bottom: 15px;
+}
+.shadow {
+    box-shadow: 3px 3px 3px black;
+}
+form div a {
+    margin-left: 15px;
+}
